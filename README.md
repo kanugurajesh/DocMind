@@ -1,8 +1,5 @@
 # DocMind
 
-## Project Title
-**DocMind**
-
 ## Description
 DocMind, also known as the Auto-README Generator, is a powerful Python-based command-line interface (CLI) tool designed to automate the creation of detailed and structured `README.md` files for public GitHub repositories. By leveraging the advanced capabilities of Large Language Models (LLMs) via LangChain and integrating with the GitHub API, DocMind intelligently analyzes the content, structure, and purpose of a given repository.
 
