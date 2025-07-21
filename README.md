@@ -100,7 +100,7 @@ To demonstrate how to run the tool, here's the typical command you would execute
 
 ```bash
 # Generate a README for the 'langchain-ai' repository by LangChain
-python main.py https://github.com/langchain-ai/langchain
+python main.py https://github.com/{username}/{repo_name}
 ```
 
 Upon successful execution, a file named `README_generated.md` will appear in the current directory, containing the newly generated documentation.
