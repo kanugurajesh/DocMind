@@ -5,9 +5,11 @@ def fetch_repo_files(repo_url):
     repo_name = repo_url.split("github.com/")[-1]
     if repo_name.endswith(".git"):
         repo_name = repo_name[:-4]
+        
     repo = g.get_repo(repo_name)
 
     files = repo.get_contents("")
+    
     result = []
     while files:
         file = files.pop(0)
