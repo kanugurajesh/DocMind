@@ -1,6 +1,7 @@
 import sys
 import os
 from agents.doc_agent import generate_readme
+from repo_utils.fetch_files import update_or_create_readme
 
 def main():
     if len(sys.argv) != 2:
@@ -17,7 +18,14 @@ def main():
         with open("README_generated.md", "w", encoding="utf-8") as f:
             f.write(readme)
         
-        print("README.md generated successfully!")
+        print("README.md generated locally as README_generated.md!")
+        
+        # Update or create README.md in the GitHub repo
+        try:
+            update_or_create_readme(repo_url, readme, commit_message="Automated: Update README.md with DocMind")
+            print("README.md updated/created in the GitHub repository!")
+        except Exception as github_e:
+            print(f"Failed to update/create README.md in GitHub: {github_e}")
         
     except Exception as e:
         print(f"Error generating README: {e}")
